@@ -30,7 +30,7 @@
 }
 
 .top {
-  background: url(thumbnail.png);
+  background: iamge-url("thumbnail.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
