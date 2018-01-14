@@ -1,0 +1,2 @@
+class InstagramMailer < ApplicationMailer
+end

@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag "application" %>
+
+<div class="container">
+
+  <div class="form-horizontal" >
+
+    <div class="form-group">
+      <h2>PHOTO詳細画面</h2>
+    </div>
+
+    <div class="form-group">
+      <p>PHOTO：<%= image_tag @instagram.image.url %></p>
+    </div>
+      
+    <div class="form-group">
+      <p>コメント：<%= @instagram.content %></p>
+    </div>
+
+    <div class="form-group">
+      <p>ハンドルネーム：<%= @user.cname %></p>
+      <p><%= image_tag @user.image.thumb.url %></p>
+    </div>
+
+    <% if @instagram.user_id == current_user.id %>
+
+    <div class="form-group">
+      <%= link_to 'PHOTOを編集する', edit_instagram_path(instagram_id: @instagram.id), method: :get, :class => "btn btn-success btn-block" %>
+    </div>
+    <div class="form-group">
+      <%= link_to 'PHOTOを削除する', instagram_path(instagram_id: @instagram.id), method: :delete, :class => "btn btn-danger btn-block" %>
+    </div>
+    <% else %>
+    <% end %>
+
+    <% unless @instagram.user_id == current_user.id %>
+      <% if @favorite.present? %>
+
+        <div class="form-group">
+          <%= link_to 'お気に入りを解除する', favorite_path(instagram_id: @instagram.id), method: :delete, :class => "btn btn-danger btn-block" %>
+        </div>
+
+      <% else %>
+  
+        <div class="form-group">
+          <%= link_to 'お気に入りに登録する', favorites_path(instagram_id: @instagram.id), method: :post, :class => "btn btn-success btn-block" %>
+        </div>
+      <% end %>
+    <% end %>
+    
+    <div class="form-group">
+      <%= link_to '戻る', instagrams_path, :class => "btn btn-primary btn-block" %>
+    </div>
+    
+  </div>
+</div>

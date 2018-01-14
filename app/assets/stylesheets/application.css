@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap/dist/css/bootstrap.min
+ *= require_tree .
+ *= require_self
+ */
+
+.zoom img:hover {
+  opacity: 0.6;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.image {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.top {
+  background: url(thumbnail.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.top div{
+  background-color: rgba(255,255,255,0.5); 
+}
+
+.title{
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.images img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment{
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.navbar {
+  margin-top: 20px;
+}
+
+.navbar-default{
+  background-color: #fff;
+}
+
+.form-horizontal{
+  max-width: 360px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.container{
+  max-width: 1050px;
+  width: 100%;
+}
+
+.flow {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.home{
+position:relative;
+}
+.home:hover:after{
+content:"ホーム";
+display:block;
+position:absolute;
+bottom:10px;
+left:40px;
+width:100%;
+height:30px;
+text-align:center;
+}
+
+.search{
+position:relative;
+}
+.search:hover:after{
+content:"一覧";
+display:block;
+position:absolute;
+bottom:10px;
+left:40px;
+width:100%;
+height:30px;
+text-align:center;
+}
+
+.new{
+position:relative;
+}
+.new:hover:after{
+content:"新規投稿";
+display:block;
+position:absolute;
+bottom:10px;
+left:40px;
+width:100%;
+height:30px;
+text-align:center;
+}
+
+.heart{
+position:relative;
+}
+.heart:hover:after{
+content:"お気に入り";
+display:block;
+position:absolute;
+bottom:10px;
+left:40px;
+width:100%;
+height:30px;
+text-align:center;
+}

@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "application" %>
+
+<div class="container">
+  <div class="zoom">
+    <div class="row">
+      <div class="title">
+        <h2>お気に入り一覧</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <p><%= notice %></p>
+    </div>
+
+    <div class="row">
+      <div class="flow">
+      <% @favorites_instagrams.each do |instagram| %>
+        <div class="col-sm-6 col-md-3" >
+          <p><%= link_to image_tag(instagram.image.url), favorite_path(instagram.id) %></p>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

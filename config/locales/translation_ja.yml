@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      session: サインイン
+    attributes:
+      session:
+
+  label:
+    email: メールアドレス
+    password: パスワード
+    photo: "ＰＨＯＴＯ"
+    content: "コメント"

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Takashi Endo">
+    <link rel="icon" href="/assets/images/favicon.ico">
+
+    <title>Instagrams</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    
+    <header>
+      <nav class="navbar navbar-default" style="border: 2px solid #dcdcdc" >
+        <div class="container" >
+          <div class = "zoom" >
+            <%= link_to image_tag("camera.png", :size => "70x70" ), root_path, class: "home" %>
+            <div class="pull-right">
+              <% if logged_in? %>
+                <%= link_to "Sign out", session_path(current_user.id), method: :delete, class: "btn btn-danger navbar-btn" %>
+              <% else %>
+                <%= link_to "Sign in", new_session_path, method: :get, class: "btn btn-primary navbar-btn" %>
+              <% end %>
+              <%= link_to "Sign up", new_user_path, class: "btn btn-success navbar-btn" %>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script>
+        $(function() {
+          $('a').on('mouseenter', function() {
+            $(this).css('color', 'yellowgreen');
+          })
+          .on('mouseleave', function(){
+            $(this).css('color', 'white');
+          });
+        });
+      </script>
+    </header>
+    
+    <%= yield %>
+
+    <footer>    
+      <nav class="navbar fixed-bottom", style="border: 2px solid #dcdcdc" >
+        <div class="container" >
+          <div class = "zoom" >
+
+
+                <%= link_to image_tag("home.png", :size => "40x40" ), root_path, class: "image home" %>
+                <%= link_to image_tag("search.png", :size => "40x40" ), instagrams_path, class: "image search" %>
+                <%= link_to image_tag("new.png", :size => "60x60" ), new_instagram_path, class: "image new"  %>
+                <%= link_to image_tag("heart.png", :size => "60x60" ), favorites_path, class: "image heart"  %>
+                <%= link_to image_tag("user.png", :size => "50x50" ), "#", class: "image"  %>
+          </div>
+        </div>
+      </nav>
+
+    </footer>
+  </body>
+</html>
