@@ -32,11 +32,11 @@
 .top {
   background-image: iamge-url("t-nail.png");
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .top div{
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: rgba(255,255,255,0.5);
 }
 
