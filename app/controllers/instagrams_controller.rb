@@ -21,6 +21,7 @@ class InstagramsController < ApplicationController
       @instagram.image.retrieve_from_cache! params[:cache][:image]
 
       if @instagram.save
+        InstagramMailer.instagram_mail(@instagram).deliver
         redirect_to instagrams_path, notice: "PHOTOをアップしました‼"
       else
         render 'new'
