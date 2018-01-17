@@ -8,7 +8,7 @@
     <meta name="author" content="Takashi Endo">
     <%= favicon_link_tag('favicon.ico') %>
 
-    <title>Instagrams</title>
+    <title>InstaClones</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -60,7 +60,8 @@
                 <%= link_to image_tag("search.png", :size => "40x40" ), instagrams_path, class: "image search" %>
                 <%= link_to image_tag("new.png", :size => "60x60" ), new_instagram_path, class: "image new"  %>
                 <%= link_to image_tag("heart.png", :size => "60x60" ), favorites_path, class: "image heart"  %>
-                <%= link_to image_tag("user.png", :size => "50x50" ), "#", class: "image"  %>
+                <%= link_to image_tag("user.png", :size => "50x50" ), "#", class: "image acount"  %>
+                <p class="author">Copyright Takashi Endo</p>
           </div>
         </div>
       </nav>
