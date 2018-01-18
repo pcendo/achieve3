@@ -22,7 +22,7 @@
       <nav class="navbar navbar-default" style="border: 2px solid #dcdcdc" >
         <div class="container" >
           <div class = "zoom" >
-            <%= link_to image_tag("camera.png", :size => "70x70" ), root_path, class: "top" %>
+            <%= link_to image_tag("camera.png", :size => "70x70" ), root_path, class: "tops" %>
             <div class="pull-right">
               <% if logged_in? %>
                 <%= link_to "Sign out", session_path(current_user.id), method: :delete, class: "btn btn-danger navbar-btn" %>
