@@ -95,7 +95,7 @@
 .tops{
 position:relative;
 }
-.home:hover:after{
+.tops:hover:after{
 content:"InstaClones";
 display:block;
 position:absolute;
