@@ -18,7 +18,13 @@
 
     <div class="form-group">
       <p>ハンドルネーム：<%= @user.cname %></p>
-      <p><%= image_tag @user.image.thumb.url %></p>
+      <p>
+        <% if @user.image.thumb.url == nil %>
+          <%= image_tag "no_image.png" %>
+        <% else %>
+          <%= image_tag @user.image.thumb.url %>
+        <% end %>
+      </p>
     </div>
 
     <% if @instagram.user_id == current_user.id %>
