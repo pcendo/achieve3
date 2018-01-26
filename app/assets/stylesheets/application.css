@@ -185,8 +185,8 @@ text-align:center;
 
 .contain {
   object-fit: contain;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: #ccc;
   border: 1px solid #ccc;
 }
