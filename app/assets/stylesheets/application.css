@@ -182,3 +182,11 @@ text-align:center;
   color: #000000;
   text-align: center;
 }
+
+.contain {
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}

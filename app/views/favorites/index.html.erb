@@ -16,7 +16,7 @@
       <div class="flow">
       <% @favorites_instagrams.each do |instagram| %>
         <div class="col-sm-6 col-md-3" >
-          <p><%= link_to image_tag(instagram.image.url), favorite_path(instagram.id) %></p>
+          <p class="contain"><%= link_to image_tag(instagram.image.url), favorite_path(instagram.id) %></p>
         </div>
       <% end %>
       </div>
